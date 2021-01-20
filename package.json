@@ -1,9 +1,9 @@
 {
   "name": "vue-lightweight-modal",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "David Noe",
   "description": "A very simple SSR-ready modal component.",
-  "repository": "https://github.com/david-noe/vue-simple-fade-modal",
+  "repository": "https://github.com/david-noe/vue-lightweight-modal",
   "main": "dist/LightweightModal.ssr.js",
   "browser": "dist/LightweightModal.esm.js",
   "module": "dist/LightweightModal.esm.js",

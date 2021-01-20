@@ -18,11 +18,31 @@
       required: false,
       default: 0,
       type: Number
+    },
+    max: {
+      required: false,
+      default: '1000px',
+      type: String
+    },
+    min: {
+      required: false,
+      default: '0',
+      type: String
+    },
+    duration: {
+      required: false,
+      default: '900ms',
+      type: String
     }
   },
   computed: {
-    modalStyle: function modalStyle() {
-      return "border-radius: ".concat(this.radius, "px");
+    cssProps: function cssProps() {
+      return {
+        '--border-radius': "".concat(this.radius, "px"),
+        '--max-width': "".concat(this.max),
+        '--min-width': "".concat(this.min),
+        '--duration': "".concat(this.duration)
+      };
     }
   },
   methods: {
@@ -154,14 +174,13 @@ var __vue_render__ = function __vue_render__() {
 
   var _c = _vm._self._c || _h;
 
-  return _c('div', [_vm._ssrNode("<div class=\"modal\" data-v-348b89c2>", "</div>", [_c('transition', {
+  return _c('div', [_vm._ssrNode("<div class=\"vue-lightweight-modal\"" + _vm._ssrStyle(null, _vm.cssProps, null) + " data-v-47175996>", "</div>", [_c('transition', {
     attrs: {
       "name": "fade-up",
       "appear": ""
     }
   }, [_vm.show ? _c('div', {
-    staticClass: "inner",
-    style: _vm.modalStyle
+    staticClass: "inner"
   }, [_c('div', {
     staticClass: "header"
   }, [_c('h3', [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('div', {
@@ -216,11 +235,11 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-348b89c2_0", {
-    source: ".modal[data-v-348b89c2]{position:fixed;top:50%;left:50%;transform:translate(-50%,-60%);min-width:400px;max-width:1200px;width:98%;z-index:9999}.modal .inner[data-v-348b89c2]{padding:1rem;background:#fff}.header[data-v-348b89c2]{display:flex;justify-content:space-between;align-items:center;margin-bottom:1em}h3[data-v-348b89c2]{margin:0}.close[data-v-348b89c2]{height:20px;width:20px;cursor:pointer}.outerclick[data-v-348b89c2]{background:rgba(0,0,0,.2);position:fixed;z-index:9998;width:100vw;height:100vh;position:fixed;top:0;left:0;opacity:1}.fade-up-enter-active[data-v-348b89c2]{animation:fade-up-data-v-348b89c2 .9s cubic-bezier(.075,.82,.165,1)}.fade-up-leave-active[data-v-348b89c2]{animation:fade-down-data-v-348b89c2 .8s cubic-bezier(.075,.82,.165,1)}@keyframes fade-up-data-v-348b89c2{from{opacity:0;visibility:hidden;transform:translateY(50px)}to{opacity:1;transform:0;visibility:visible}}@keyframes fade-down-data-v-348b89c2{from{opacity:1;transform:0;visibility:visible}to{opacity:0;visibility:hidden;transform:translateY(50px)}}.fade-enter-active[data-v-348b89c2],.fade-leave-active[data-v-348b89c2]{transition:opacity .8s ease}.fade-enter-from[data-v-348b89c2],.fade-leave-to[data-v-348b89c2]{opacity:0}",
+  inject("data-v-47175996_0", {
+    source: ".vue-lightweight-modal[data-v-47175996]{position:fixed;top:50%;left:50%;transform:translate(-50%,-60%);max-width:var(--max-width);min-width:var(--min-width);width:98%;z-index:9999}.vue-lightweight-modal .inner[data-v-47175996]{padding:1rem;background:#fff;border-radius:var(--border-radius)}.header[data-v-47175996]{display:flex;justify-content:space-between;align-items:center;margin-bottom:1em}h3[data-v-47175996]{margin:0}.close[data-v-47175996]{height:20px;width:20px;cursor:pointer}.outerclick[data-v-47175996]{background:rgba(0,0,0,.2);position:fixed;z-index:9998;width:100vw;height:100vh;position:fixed;top:0;left:0;opacity:1}.fade-up-enter-active[data-v-47175996]{animation:fade-up-data-v-47175996 var(--duration) cubic-bezier(.075,.82,.165,1)}.fade-up-leave-active[data-v-47175996]{animation:fade-down-data-v-47175996 calc(var(--duration) - 150ms) cubic-bezier(.075,.82,.165,1)}@keyframes fade-up-data-v-47175996{from{opacity:0;visibility:hidden;transform:translateY(50px)}to{opacity:1;transform:0;visibility:visible}}@keyframes fade-down-data-v-47175996{from{opacity:1;transform:0;visibility:visible}to{opacity:0;visibility:hidden;transform:translateY(50px)}}.fade-enter-active[data-v-47175996],.fade-leave-active[data-v-47175996]{transition:opacity .8s ease}.fade-enter-from[data-v-47175996],.fade-leave-to[data-v-47175996]{opacity:0}",
     map: undefined,
     media: undefined
-  }), inject("data-v-348b89c2_1", {
+  }), inject("data-v-47175996_1", {
     source: ".scale-video{width:100%;padding-top:56.25%;position:relative}.scale-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}",
     map: undefined,
     media: undefined
@@ -229,10 +248,10 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-348b89c2";
+var __vue_scope_id__ = "data-v-47175996";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-348b89c2";
+var __vue_module_identifier__ = "data-v-47175996";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

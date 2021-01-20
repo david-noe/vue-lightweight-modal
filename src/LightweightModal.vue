@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="modal">
+    <div class="vue-lightweight-modal" :style="cssProps">
       <transition name="fade-up" appear>
-        <div class="inner" :style="modalStyle" v-if="show">
+        <div class="inner" v-if="show">
           <div class="header">
             <h3>{{ title }}</h3>
             <div class="close" @click="closeModal">
@@ -67,10 +67,30 @@ export default Vue.extend({
       default: 0,
       type: Number,
     },
+    max: {
+      required: false,
+      default: '1000px',
+      type: String,
+    },
+    min: {
+      required: false,
+      default: '0',
+      type: String,
+    },
+    duration: {
+      required: false,
+      default: '900ms',
+      type: String,
+    },
   },
   computed: {
-    modalStyle() {
-      return `border-radius: ${this.radius}px`
+    cssProps() {
+      return {
+        '--border-radius': `${this.radius}px`,
+        '--max-width': `${this.max}`,
+        '--min-width': `${this.min}`,
+        '--duration': `${this.duration}`,
+      }
     },
   },
 
@@ -83,20 +103,21 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.modal {
+.vue-lightweight-modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
-  min-width: 400px;
-  max-width: 1200px;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
   width: 98%;
   z-index: 9999;
 }
 
-.modal .inner {
+.vue-lightweight-modal .inner {
   padding: 1rem;
   background: #fff;
+  border-radius: var(--border-radius);
 }
 
 // Header
@@ -135,10 +156,11 @@ h3 {
 // Animation
 
 .fade-up-enter-active {
-  animation: fade-up 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fade-up var(--duration) cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .fade-up-leave-active {
-  animation: fade-down 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fade-down calc(var(--duration) - 150ms)
+    cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes fade-up {
@@ -178,7 +200,6 @@ h3 {
 }
 </style>
 <style lang="scss">
-
 // Video
 
 .scale-video {
