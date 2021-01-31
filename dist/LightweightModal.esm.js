@@ -259,11 +259,11 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-47175996_0", {
-    source: ".vue-lightweight-modal[data-v-47175996]{position:fixed;top:50%;left:50%;transform:translate(-50%,-60%);max-width:var(--max-width);min-width:var(--min-width);width:98%;z-index:9999}.vue-lightweight-modal .inner[data-v-47175996]{padding:1rem;background:#fff;border-radius:var(--border-radius)}.header[data-v-47175996]{display:flex;justify-content:space-between;align-items:center;margin-bottom:1em}h3[data-v-47175996]{margin:0}.close[data-v-47175996]{height:20px;width:20px;cursor:pointer}.outerclick[data-v-47175996]{background:rgba(0,0,0,.2);position:fixed;z-index:9998;width:100vw;height:100vh;position:fixed;top:0;left:0;opacity:1}.fade-up-enter-active[data-v-47175996]{animation:fade-up-data-v-47175996 var(--duration) cubic-bezier(.075,.82,.165,1)}.fade-up-leave-active[data-v-47175996]{animation:fade-down-data-v-47175996 calc(var(--duration) - 150ms) cubic-bezier(.075,.82,.165,1)}@keyframes fade-up-data-v-47175996{from{opacity:0;visibility:hidden;transform:translateY(50px)}to{opacity:1;transform:0;visibility:visible}}@keyframes fade-down-data-v-47175996{from{opacity:1;transform:0;visibility:visible}to{opacity:0;visibility:hidden;transform:translateY(50px)}}.fade-enter-active[data-v-47175996],.fade-leave-active[data-v-47175996]{transition:opacity .8s ease}.fade-enter-from[data-v-47175996],.fade-leave-to[data-v-47175996]{opacity:0}",
+  inject("data-v-4b7ab0e6_0", {
+    source: ".vue-lightweight-modal[data-v-4b7ab0e6]{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);max-width:var(--max-width);min-width:var(--min-width);width:98%;z-index:9999}.vue-lightweight-modal .inner[data-v-4b7ab0e6]{padding:1rem;background:#fff;border-radius:var(--border-radius);overflow:scroll;max-height:90vh}.header[data-v-4b7ab0e6]{display:flex;justify-content:space-between;align-items:center;margin-bottom:1em}h3[data-v-4b7ab0e6]{margin:0}.close[data-v-4b7ab0e6]{height:20px;width:20px;cursor:pointer}.outerclick[data-v-4b7ab0e6]{background:rgba(0,0,0,.2);position:fixed;z-index:9998;width:100vw;height:100vh;position:fixed;top:0;left:0;opacity:1}.fade-up-enter-active[data-v-4b7ab0e6]{animation:fade-up-data-v-4b7ab0e6 var(--duration) cubic-bezier(.075,.82,.165,1)}.fade-up-leave-active[data-v-4b7ab0e6]{animation:fade-down-data-v-4b7ab0e6 calc(var(--duration) - 400ms) ease}@keyframes fade-up-data-v-4b7ab0e6{from{opacity:0;visibility:hidden;transform:translateY(50px)}to{opacity:1;transform:0;visibility:visible}}@keyframes fade-down-data-v-4b7ab0e6{from{opacity:1;transform:0;visibility:visible}to{opacity:0;visibility:hidden;transform:translateY(50px)}}.fade-enter-active[data-v-4b7ab0e6],.fade-leave-active[data-v-4b7ab0e6]{transition:opacity .8s ease}.fade-enter-from[data-v-4b7ab0e6],.fade-leave-to[data-v-4b7ab0e6]{opacity:0}",
     map: undefined,
     media: undefined
-  }), inject("data-v-47175996_1", {
+  }), inject("data-v-4b7ab0e6_1", {
     source: ".scale-video{width:100%;padding-top:56.25%;position:relative}.scale-video iframe{position:absolute;top:0;left:0;width:100%;height:100%}",
     map: undefined,
     media: undefined
@@ -272,7 +272,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-47175996";
+const __vue_scope_id__ = "data-v-4b7ab0e6";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

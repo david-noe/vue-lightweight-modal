@@ -107,10 +107,11 @@ export default Vue.extend({
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   max-width: var(--max-width);
   min-width: var(--min-width);
   width: 98%;
+
   z-index: 9999;
 }
 
@@ -118,6 +119,8 @@ export default Vue.extend({
   padding: 1rem;
   background: #fff;
   border-radius: var(--border-radius);
+  overflow: scroll;
+  max-height: 90vh;
 }
 
 // Header
@@ -159,8 +162,8 @@ h3 {
   animation: fade-up var(--duration) cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .fade-up-leave-active {
-  animation: fade-down calc(var(--duration) - 150ms)
-    cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fade-down calc(var(--duration) - 400ms)
+   ease;
 }
 
 @keyframes fade-up {
