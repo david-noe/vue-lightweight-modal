@@ -162,8 +162,11 @@ h3 {
   animation: fade-up var(--duration) cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .fade-up-leave-active {
-  animation: fade-down calc(var(--duration) - 400ms)
-   ease;
+  animation: fade-down calc(var(--duration) - 400ms) ease;
+}
+
+.fade-up-leave-to {
+  pointer-events: none;
 }
 
 @keyframes fade-up {
