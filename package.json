@@ -1,6 +1,6 @@
 {
   "name": "vue-lightweight-modal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "David Noe",
   "description": "A very simple SSR-ready modal component.",
   "repository": "https://github.com/david-noe/vue-lightweight-modal",

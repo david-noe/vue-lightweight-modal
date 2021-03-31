@@ -165,8 +165,8 @@ h3 {
   animation: fade-down calc(var(--duration) - 400ms) ease;
 }
 
-.fade-up-leave-to {
-  pointer-events: none;
+.outerclick.fade-leave-to {
+    pointer-events: none;
 }
 
 @keyframes fade-up {
@@ -206,6 +206,7 @@ h3 {
 }
 </style>
 <style lang="scss">
+
 // Video
 
 .scale-video {
